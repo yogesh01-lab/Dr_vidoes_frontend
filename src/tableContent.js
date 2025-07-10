@@ -46,8 +46,8 @@ function TableContent() {
     console.log(baseURL);        
   
     useEffect(() => {
-      axios.get(`${baseURL}/api/data.json`)
-    //   axios.get('http://localhost:5000/api/data.json')
+    //   axios.get(`${baseURL}/api/data.json`)
+      axios.get('https://dr-vidoes-backend.onrender.com/api/data.json')
       .then( Response => {console.log(Response.data)
       setData(Response.data)})
       .catch(err => console.log(err))
