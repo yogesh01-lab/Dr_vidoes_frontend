@@ -42,10 +42,11 @@ function TableContent() {
 
     const [data, setData] = useState([]);
     
-    const baseURL = process.env.REACT_APP_API_BASE_URL;
-    console.log(baseURL);        
+            
   
     useEffect(() => {
+    const baseURL = process.env.REACT_APP_API_BASE_URL;
+    console.log(baseURL);
       axios.get(`${baseURL}/api/data.json`)
     //   axios.get('https://dr-vidoes-backend.onrender.com/api/data.json')
       .then( Response => {console.log(Response.data)

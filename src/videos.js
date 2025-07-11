@@ -21,7 +21,7 @@ const GetVideos = () => {
         return response.json();
       })
       .then((data) => {
-        const selectedVideo = data.find((video) => video.id == Number(id));
+        const selectedVideo = data.find((video) => video.id === Number(id));
         setVideo(selectedVideo);
       })
       .catch((error) => {
