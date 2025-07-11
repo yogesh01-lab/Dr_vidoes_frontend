@@ -10,7 +10,9 @@ const usePageView = (selectedVideo) => {
     
     const updateCount = async (videoId) => {
       try {
-        const response = await fetch("https://dr-vidoes-backend.onrender.com/api/update-count", {
+        const baseURL = process.env.REACT_APP_API_BASE_URL;
+        console.log(baseURL);
+        const response = await fetch(`${baseURL}/api/update-count`, {
           method: 'POST',
           headers: {
             'Content-Type': 'application/json',

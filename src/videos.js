@@ -7,12 +7,12 @@ const GetVideos = () => {
   const [video, setVideo] = useState(null);
   const { id } = useParams();
 
-  // const baseURL = process.env.REACT_APP_API_BASE_URL;
-  // console.log(baseURL);
+  const baseURL = process.env.REACT_APP_API_BASE_URL;
+  console.log(baseURL);
     
 
   useEffect(() => {
-    const url = `https://dr-vidoes-backend.onrender.com/api/data.json`;
+    const url = `${baseURL}/api/data.json`;
     fetch(url)
       .then((response) => {
         if (!response.ok) {
