@@ -20,6 +20,8 @@ function Login() {
 
         if (username === 'abbott' && password === 'ttobba'){
             console.log('login succeessful!!')
+            console.log("Base URL:", process.env.REACT_APP_API_BASE_URL);
+
             navigate("/admin")
         }else{
             console.log('login unsucceessful!!')
